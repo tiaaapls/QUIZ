@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrasiPendudukActivity"
+    android:background="@drawable/bgg">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/registrasi_hading"
+        android:background="#DFB581"
+        android:textColor="@android:color/white"
+        android:padding="15dp"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textStyle="bold"
+        android:text="REGISTRASI PENDUDUK"
+        />
+
+    <TextView
+        android:id="@+id/txt_nik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NIK"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_below="@id/registrasi_hading"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="12dp"
+        />
+
+    <EditText
+        android:id="@+id/edit_nik"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan NIK"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:ems="20"
+        android:layout_centerHorizontal="true"
+        android:inputType="textPhonetic|number"
+        android:layout_below="@id/txt_nik"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:id="@+id/txt_nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Lengkap"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_below="@id/edit_nik"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="12dp"
+        />
+
+    <EditText
+        android:id="@+id/edit_nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Nama Lengkap"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:ems="20"
+        android:layout_centerHorizontal="true"
+        android:inputType="textPersonName"
+        android:layout_below="@id/txt_nama"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:id="@+id/txt_jeniskelamin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jenis Kelamin"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_below="@id/edit_nama"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="12dp"
+        />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/txt_jeniskelamin" >
+
+        <RadioButton
+            android:id="@+id/rb_laki2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Laki-laki"
+            android:textColor="@color/black"
+            android:focusable="true"
+            android:checked="false"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_perempuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Perempuan"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"
+            android:focusable="true"
+            android:checked="false"
+            />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txt_tempatlahir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tempat Lahir"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_below="@id/radio_group"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="12dp"
+        />
+
+    <EditText
+        android:id="@+id/edit_tempatlahir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Tempat Lahir"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:ems="20"
+        android:layout_centerHorizontal="true"
+        android:inputType="textPersonName"
+        android:layout_below="@id/txt_tempatlahir"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:id="@+id/txt_tanggallahir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tanggal Lahir"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_below="@id/edit_tempatlahir"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="12dp"
+        />
+
+    <Button
+        android:id="@+id/btn_date"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="01 Januari 2020"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        style="?android:spinnerStyle"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/txt_tanggallahir"
+        android:onClick="openDatePicker"
+        />
+
+    <TextView
+        android:id="@+id/txt_alamat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alamat"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_below="@id/btn_date"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="12dp"
+        />
+    
+    <EditText
+        android:id="@+id/edit_alamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Alamat"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:ems="20"
+        android:layout_centerHorizontal="true"
+        android:inputType="textLongMessage"
+        android:layout_below="@id/txt_alamat"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:id="@+id/txt_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_below="@id/edit_alamat"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="12dp"
+        />
+
+    <EditText
+        android:id="@+id/edit_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Alamat Email"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:ems="20"
+        android:layout_centerHorizontal="true"
+        android:inputType="textEmailAddress"
+        android:layout_below="@id/txt_email"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:id="@+id/txt_telepon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telepon"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_below="@id/edit_email"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="12dp"
+        />
+
+    <EditText
+        android:id="@+id/edit_telepon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Nomor Telepon"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:ems="20"
+        android:layout_centerHorizontal="true"
+        android:inputType="textPhonetic|number"
+        android:layout_below="@id/txt_telepon"
+        android:layout_marginLeft="20dp"
+        />
+    
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:layout_margin="15dp"
+        android:layout_below="@id/edit_telepon"
+        style="@style/Platform.MaterialComponents"
+        android:backgroundTint="#DFB581"
+        />
+
+</RelativeLayout>
